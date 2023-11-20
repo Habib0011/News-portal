@@ -55,15 +55,22 @@ const newsOperations = news =>{
         console.log(single)
         const div = document.createElement('div')
         div.innerHTML=`
-        <div class="card mb-3 mt-4">
+        <div class="card mb-3 mt-4 bg-light shadow-lg ">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="${single.thumbnail_url}" class="img-fluid rounded-start p-2" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">${single.title}</h5>
+        <p class="card-text">${single.details}</p>
+        <div class="d-flex justify-content-around">
+        <span><img src ="${single.author.img}" class="" style="width:50px; border-radius:50px">
+        <p class="card-text">${single.author.name}</p>
+        </span>
+        <p><i class="fa-solid fa-eye"></i> ${single.total_view ? single.total_view: "No data found"}</p>
+        </div>
+        <p>${single.author.published_date}</p>
         <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
       </div>
     </div>
