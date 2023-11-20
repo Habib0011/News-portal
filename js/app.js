@@ -9,6 +9,7 @@ const newsOperations = news =>{
     console.log(news)
     // console.log(news.data.news_category[0].category_id)
     const linkInfo = document.getElementById('link-info')
+  
     const div = document.createElement('div')
     div.innerHTML =`
     <div class="d-flex justify-content-around">
@@ -51,6 +52,7 @@ const newsOperations = news =>{
   const displayDetails=Details=>{
     console.log(Details)
     const dataInfo = document.getElementById('data-info')
+    dataInfo.innerHTML=''
     Details.forEach(single => {
         console.log(single)
         const div = document.createElement('div')
